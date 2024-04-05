@@ -1,0 +1,31 @@
+<!-- fragment_home.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fragmento para seleccionar colores -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/color_picker_fragment"
+        android:name="com.example.game.ui.home.ColorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- Fragmento con altura de 10dp -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/TextFragment"
+        android:name="com.example.game.ui.home.TextFragment"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/color_picker_fragment"/>
+
+    <!-- Fragmento con DrawingView para dibujar -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/drawingFragment"
+        android:name="com.example.game.ui.home.DrawingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextFragment"/>
+</RelativeLayout>
